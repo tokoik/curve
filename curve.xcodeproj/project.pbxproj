@@ -1,0 +1,210 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D18DECF136D8004008B551E /* curve.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D18DECE136D8004008B551E /* curve.cpp */; };
+		7D7AF85F1222C8CC003A0434 /* opengl.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7D7AF85E1222C8CC003A0434 /* opengl.icns */; };
+		7DF3C800136C2D4500289E7E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3C7FF136C2D4500289E7E /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7D18DECE136D8004008B551E /* curve.cpp */ = {isa = PBXFileReference; fileEncoding = 8; lastKnownFileType = sourcecode.cpp.cpp; path = curve.cpp; sourceTree = "<group>"; };
+		7D18DED0136D8085008B551E /* curve.h */ = {isa = PBXFileReference; fileEncoding = 8; lastKnownFileType = sourcecode.c.h; path = curve.h; sourceTree = "<group>"; };
+		7D1E90EE1123E36C005E6C75 /* curve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = curve.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1E90F11123E36C005E6C75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D7AF85E1222C8CC003A0434 /* opengl.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = opengl.icns; sourceTree = "<group>"; };
+		7DF3C7FF136C2D4500289E7E /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 8; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D1E90EC1123E36C005E6C75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D1E90D81123E2F7005E6C75 = {
+			isa = PBXGroup;
+			children = (
+				7DF3C7FF136C2D4500289E7E /* main.cpp */,
+				7D18DED0136D8085008B551E /* curve.h */,
+				7D18DECE136D8004008B551E /* curve.cpp */,
+				7D1E90EF1123E36C005E6C75 /* Products */,
+				7D1E90F11123E36C005E6C75 /* Info.plist */,
+				7D7AF85E1222C8CC003A0434 /* opengl.icns */,
+			);
+			sourceTree = "<group>";
+		};
+		7D1E90EF1123E36C005E6C75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D1E90EE1123E36C005E6C75 /* curve.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D1E90ED1123E36C005E6C75 /* curve */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D1E90F41123E36D005E6C75 /* Build configuration list for PBXNativeTarget "curve" */;
+			buildPhases = (
+				7D1E90EA1123E36C005E6C75 /* Resources */,
+				7D1E90EB1123E36C005E6C75 /* Sources */,
+				7D1E90EC1123E36C005E6C75 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = curve;
+			productName = curve;
+			productReference = 7D1E90EE1123E36C005E6C75 /* curve.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D1E90DA1123E2F7005E6C75 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7D1E90DD1123E2F7005E6C75 /* Build configuration list for PBXProject "curve" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 7D1E90D81123E2F7005E6C75;
+			productRefGroup = 7D1E90EF1123E36C005E6C75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D1E90ED1123E36C005E6C75 /* curve */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D1E90EA1123E36C005E6C75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D7AF85F1222C8CC003A0434 /* opengl.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D1E90EB1123E36C005E6C75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF3C800136C2D4500289E7E /* main.cpp in Sources */,
+				7D18DECF136D8004008B551E /* curve.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7D1E90DB1123E2F7005E6C75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		7D1E90DC1123E2F7005E6C75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Release;
+		};
+		7D1E90F21123E36D005E6C75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					GLUT,
+					"-framework",
+					OpenGL,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = curve;
+			};
+			name = Debug;
+		};
+		7D1E90F31123E36D005E6C75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					GLUT,
+					"-framework",
+					OpenGL,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = curve;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D1E90DD1123E2F7005E6C75 /* Build configuration list for PBXProject "curve" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D1E90DB1123E2F7005E6C75 /* Debug */,
+				7D1E90DC1123E2F7005E6C75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D1E90F41123E36D005E6C75 /* Build configuration list for PBXNativeTarget "curve" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D1E90F21123E36D005E6C75 /* Debug */,
+				7D1E90F31123E36D005E6C75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D1E90DA1123E2F7005E6C75 /* Project object */;
+}
