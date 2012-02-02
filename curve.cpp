@@ -7,10 +7,10 @@
 */
 static float catmull_rom(float x0, float x1, float x2, float x3, float t)
 {
-  float v1 = (x2 - x0) * 0.5, v2 = (x3 - x1) * 0.5;
+  float v1 = (x2 - x0) * 0.5f, v2 = (x3 - x1) * 0.5f;
 
-  return (((2.0 * x1 - 2.0 * x2 + v1 + v2) * t
-    - 3.0 * x1 + 3.0 * x2 - 2.0 * v1 - v2) * t
+  return (((2.0f * x1 - 2.0f * x2 + v1 + v2) * t
+    - 3.0f * x1 + 3.0f * x2 - 2.0f * v1 - v2) * t
     + v1) * t + x1;
 }
 
@@ -35,7 +35,8 @@ void curve(float *q, const float (*p)[3], const float *t, int n, float u)
 {
   if (--n < 0)
     return;
-  else if (n == 0) {
+  else if (n == 0)
+  {
     q[0] = p[0][0];
     q[1] = p[0][1];
     q[2] = p[0][2];
@@ -44,7 +45,8 @@ void curve(float *q, const float (*p)[3], const float *t, int n, float u)
     int i = 0, j = n;
     
     // u ‚ðŠÜ‚Þ t ‚Ì‹æŠÔ [t[i], t[i+1]) ‚ð“ñ•ª–@‚Å‹‚ß‚é
-    while (i < j) {
+    while (i < j)
+    {
       int k = (i + j) / 2;
       if (t[k] < u)
         i = k + 1;
@@ -53,7 +55,8 @@ void curve(float *q, const float (*p)[3], const float *t, int n, float u)
     }
     
     if (--i < 0) i = 0;
-    if (i < n) {
+    if (i < n)
+    {
       int i0 = i - 1;
       if (i0 < 0) i0 = 0;
       int i1 = i + 1;
