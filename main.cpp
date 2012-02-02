@@ -69,7 +69,7 @@ static void mouse(int button, int state, int x, int y)
     if (state == GLUT_DOWN)
     {
       key.push_back(static_cast<float>(point.size()));
-      vec3 p = { static_cast<float>(x), static_cast<float>(y), 0.0f };
+      vec3 p = { { static_cast<float>(x), static_cast<float>(y), 0.0f } };
       point.push_back(p);
       glutPostRedisplay();
     }
