@@ -4,6 +4,6 @@ OBJECTS	= $(subst .cpp,.o,$(wildcard *.cpp))
 TARGET	= curve
 
 $(TARGET): $(OBJECTS)
-
+	$(LINK.cc) $^ $(LOADLIBES) $(LDLIBS) -o $@
 clean:
 	-rm -f $(TARGET) *.o *~
