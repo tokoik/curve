@@ -1,17 +1,19 @@
-CXXFLAGS	= -I/usr/X11R6/include -DX11 -Wall
-LDLIBS	= -L/usr/X11R6/lib -lglut -lGLU -lGL -lm
-OBJECTS	= $(patsubst %.cpp,%.o,$(wildcard *.cpp))
 TARGET	= curve
+SOURCES	= $(wildcard *.cpp)
+HEADERS	= $(wildcard *.h)
+OBJECTS	= $(patsubst %.cpp,%.o,$(SOURCES))
+CXXFLAGS	= -I/usr/X11R6/include -g -DX11 -Wall
+LDLIBS	= -L/usr/X11R6/lib -lglut -lGLU -lGL -lm
 
-.PHONY: clean depend
+.PHONY: clean
 
 $(TARGET): $(OBJECTS)
-	$(LINK.cc) $^ $(LOADLIBES) $(LDLIBS) -o $@
+	$(LINK.c) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+$(TARGET).dep: $(SOURCES) $(HEADERS)
+	$(CXX) $(CFLAGS) -MM $(SOURCES) > $@
 
 clean:
-	-$(RM) $(TARGET) *.o *~ .*~ core
+	-$(RM) $(TARGET) *.o *~ .*~ a.out core
 
-depend:
-	$(CXX) $(CXXFLAGS) -MM *.cpp > $(TARGET).dep
-
--include $(wildcard *.dep)
+-include $(TARGET).dep
