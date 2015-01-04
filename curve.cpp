@@ -7,11 +7,8 @@
 */
 static float catmull_rom(float x0, float x1, float x2, float x3, float t)
 {
-  float v1 = (x2 - x0) * 0.5f, v2 = (x3 - x1) * 0.5f;
-
-  return (((2.0f * x1 - 2.0f * x2 + v1 + v2) * t
-    - 3.0f * x1 + 3.0f * x2 - 2.0f * v1 - v2) * t
-    + v1) * t + x1;
+  float dx = x1 - x2, v1 = (x2 - x0) * 0.5f, v2 = (x3 - x1) * 0.5f;
+  return (((dx * 2.0f + v1 + v2) * t - dx * 3.0f - v1 * 2.0f - v2) * t + v1) * t + x1;
 }
 
 /*
