@@ -1,16 +1,17 @@
+ï»¿#if defined(__APPLE__)
+#  define GL_SILENCE_DEPRECATION
+#  include <GLUT/glut.h>
+#else
+#  if defined(_WIN32)
+//#    pragma comment(linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
+#    define _USE_MATH_DEFINES
+#    define _CRT_SECURE_NO_WARNINGS
+#  endif
+#  include <GL/glut.h>
+#endif
 #include <cstdlib>
 #include <cmath>
 #include <vector>
- 
-#if defined(WIN32)
-//#  pragma comment(linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
-#  include "glut.h"
-#elif defined(__APPLE__) || defined(MACOSX)
-#  include <GLUT/glut.h>
-#else
-#  define GL_GLEXT_PROTOTYPES
-#  include <GL/glut.h>
-#endif
 
 #include "curve.h"
 
@@ -29,7 +30,7 @@ static void display(void)
     glPointSize(5.0);
     glColor3d(0.0, 1.0, 0.0);
     glVertexPointer(3, GL_FLOAT, sizeof (vec3), point[0].p);
-    glDrawArrays(GL_POINTS, 0, point.size());
+    glDrawArrays(GL_POINTS, 0, (GLsizei)point.size());
 
     glColor3d(1.0, 0.0, 0.0);
     for (std::vector<vec3>::iterator i = point.begin(); i != point.end() - 1; ++i)
@@ -38,7 +39,7 @@ static void display(void)
 
       for (int j = 0; j <= STEP; ++j)
       {
-        curve(p[j], &point[0].p, &key[0], point.size(), t + (float)j / (float)STEP);
+        curve(p[j], &point[0].p, &key[0], (int)point.size(), t + (float)j / (float)STEP);
       }
 
       glVertexPointer(3, GL_FLOAT, 0, p);
@@ -51,13 +52,13 @@ static void display(void)
 
 static void resize(int w, int h)
 {
-  /* ƒEƒBƒ“ƒhƒE‘S‘Ì‚ðƒrƒ…[ƒ|[ƒg‚É‚·‚é */
+  /* ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦å…¨ä½“ã‚’ãƒ“ãƒ¥ãƒ¼ãƒãƒ¼ãƒˆã«ã™ã‚‹ */
   glViewport(0, 0, w, h);
 
-  /* •ÏŠ·s—ñ‚Ì‰Šú‰» */
+  /* å¤‰æ›è¡Œåˆ—ã®åˆæœŸåŒ– */
   glLoadIdentity();
 
-  /* ƒXƒNƒŠ[ƒ“ã‚ÌÀ•WŒn‚ðƒ}ƒEƒX‚ÌÀ•WŒn‚Éˆê’v‚³‚¹‚é */
+  /* ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ä¸Šã®åº§æ¨™ç³»ã‚’ãƒžã‚¦ã‚¹ã®åº§æ¨™ç³»ã«ä¸€è‡´ã•ã›ã‚‹ */
   glOrtho(-0.5, (GLfloat)w - 0.5, (GLfloat)h - 0.5, -0.5, -1.0, 1.0);
 }
 
