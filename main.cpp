@@ -21,7 +21,7 @@ static std::vector<float> key;
 
 #define STEP 10
 
-static void display(void)
+static void display()
 {
   glClear(GL_COLOR_BUFFER_BIT);
 
@@ -100,7 +100,7 @@ static void keyboard(unsigned char key, int x, int y)
   }
 }
 
-static void init(void)
+static void init()
 {
   glEnableClientState(GL_VERTEX_ARRAY);
   glClearColor(1.0, 1.0, 1.0, 1.0);
