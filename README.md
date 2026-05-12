@@ -6,7 +6,7 @@
 
 ## 2. ビルド方法
 
-このプログラムは [CMake](https://cmake.org/) を使ってビルドします。CMake のプロジェクト名は bezier なので、生成されるソリューションや実行ファイルの名前もそれに合わせて bezier になります。以下では、ソースコードが置かれているディレクトリで作業する前提で説明します。
+このプログラムは [CMake](https://cmake.org/) を使ってビルドします。CMake のプロジェクト名は curve なので、生成されるソリューションや実行ファイルの名前もそれに合わせて curve になります。以下では、ソースコードが置かれているディレクトリで作業する前提で説明します。
 
 ### 2.1 Windows (Visual Studio 2022 の場合)
 
@@ -18,9 +18,9 @@
 cmake -S . -B build -G "Visual Studio 17 2022"
 ```
 
-1. 生成された build/bezier.slnx または build/bezier.vcxproj を Visual Studio で開きます。
+1. 生成された build/curve.slnx または build/curve.vcxproj を Visual Studio で開きます。
 
-2. CMakeLists.txt で bezier がスタートアッププロジェクトに設定されているので、そのまま「ローカル Windows デバッガー」を実行します。
+2. CMakeLists.txt で curve がスタートアッププロジェクトに設定されているので、そのまま「ローカル Windows デバッガー」を実行します。
 
 3. 初回構成時には freeglut が自動取得されるため、ネットワーク接続が必要です。
 
@@ -34,9 +34,9 @@ cmake -S . -B build -G "Visual Studio 17 2022"
 cmake -S . -B build -G Xcode
 ```
 
-1. 生成された build/bezier.xcodeproj を Xcode で開きます。
+1. 生成された build/curve.xcodeproj を Xcode で開きます。
 
-2. スキームが bezier になっていることを確認して実行します。
+2. スキームが curve になっていることを確認して実行します。
 
 3. macOS では GLUT と OpenGL の標準 Framework を使ってビルドします。
 
@@ -61,7 +61,7 @@ cmake --build build
 
 ### 3.1 プログラムの起動方法
 
-各 OS とも、ビルド後に生成される実行ファイル名は bezier です。実行すると白いウィンドウが開き、クリックした位置に制御点と Catmull-Rom Spline 曲線が描かれます。
+各 OS とも、ビルド後に生成される実行ファイル名は curve です。実行すると白いウィンドウが開き、クリックした位置に制御点と Catmull-Rom Spline 曲線が描かれます。
 
 - **Windows**
 
@@ -69,7 +69,7 @@ Visual Studio 上で「ローカル Windows デバッガー」を押して実行
 
 ```cmd
 cd build\Debug
-bezier.exe
+curve.exe
 ```
 
 - **macOS**
@@ -82,7 +82,7 @@ Xcode 上で Run を押して起動できます。アプリケーションバン
 
 ```sh
 cd build
-./bezier
+./curve
 ```
 
 ### 3.2 操作方法
